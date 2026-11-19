@@ -14,6 +14,13 @@ void map_save_callback(std_srvs::srv::Trigger::Request::SharedPtr req, std_srvs:
 
 3、加入来自惯导的gnss、imu数据的支持
 
+4、启动
+ros2 run fast_lio gps_to_imu.py --ros-args -p gps_type:=common_msgs/msg/GpsInfo
+
+ros2 launch fast_lio mapping.launch.py
+
+ros2 bag play <ros bag数据包名>
+
 
 ![RSM1 建图效果](doc/rsm1_map.jpg)
 
